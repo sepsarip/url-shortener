@@ -1,0 +1,21 @@
+info:
+  name: shortenUrl
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE_URL}}/api/shorten"
+  body:
+    type: json
+    data: |-
+      {
+        "originalUrl":"https://www.kaggle.com/code/etietopabraham/transformer-based-approach-jdescription-vs-resume"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
